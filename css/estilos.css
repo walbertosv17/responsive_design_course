@@ -233,8 +233,8 @@ figure {
   margin-left: 20px;
 }
 .event { 
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width:48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -333,6 +333,7 @@ figure {
   max-width: 1000px;
   flex: 1;
   margin: 0 auto;
+  padding: 0 1em;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
@@ -391,6 +392,35 @@ figure {
     .project-description{
       font-size: 0.8em;
     }
+    .event {
+      width: auto;
+      flex-shrink: initial;
+    }
+    .event-imageContainer img{
+      width: 100%;
+    }
+    .contact {
+      display: block;
+      height: auto;
+      text-align: center;
+      border: solid 1px transparent;
+      padding: 10px;
+    }
+    .contact button{
+      margin: 1.2em auto;
+    }
+    .footer{
+      display: block;
+      text-align: center;
+      border: 1px solid transparent;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+  .event-detail{
+    margin: -2em 0.8em 0.8em;
+  }
 }
 
 @media screen and (max-width: 320px) {

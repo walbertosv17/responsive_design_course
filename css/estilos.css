@@ -60,6 +60,38 @@ valores */
   content: "\e900";
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?98lhaq');
+  src:  url('../fonts/icomoon.eot?98lhaq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?98lhaq') format('truetype'),
+    url('../fonts/icomoon.woff?98lhaq') format('woff'),
+    url('../fonts/icomoon.svg?98lhaq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
@@ -202,7 +234,19 @@ ul {
 figure {
   margin: 0;
 }
-
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  margin: 5px 5px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+  position: fixed;
+  display: none;
+  text-align: center;
+  line-height: 40px;
+  z-index: 5;
+}
 .header a {
   color: white;
   text-decoration: none;
@@ -440,13 +484,33 @@ figure {
     h1 {
       font-size: 1.3em;
     }
+    .burguer-button {
+      display: block;
+    }
+    .menu {
+      position: fixed;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 4;
+      top: 0;
+      left: -100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      width: 100vw;
+      transition: .3s;
+    }
+    .menu.is-active{
+      left: 0;
+    }
     .header ol{
       display: block;
     }
     .header li a {
       display: block;
       height: 40px; 
-      padding: 10px
+      padding: 10px;
+      text-decoration: underline;
     }
     .project {
       display: block;
